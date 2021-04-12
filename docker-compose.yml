@@ -11,10 +11,11 @@ services:
       - mongo
   mongo:
     image: mongo:3.6-xenial
+    container_name: mongo
     environment:
       - MONGO_INITDB_DATABASE=storybooks
     ports:
-      - '2717:27017'
+      - '27017:27017'
     networks:
       - storybooks-app
     volumes:
